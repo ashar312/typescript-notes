@@ -1,6 +1,9 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var users = {
+let users = {
     name: 'ashar',
     age: 10,
     address: 2,
@@ -8,12 +11,12 @@ var users = {
         return 'ashar';
     }
 };
-var arr = ['ashar', 'ashar', 'ashar'];
-var a = 2;
-var b = true;
-var c = 'as';
+let arr = ['ashar', 'ashar', 'ashar'];
+let a = 2;
+let b = true;
+let c = 'as';
 //union - only string and number are allowed
-var unionData;
+let unionData;
 unionData = 2;
 unionData = 'ashar';
 users.getName();
@@ -21,7 +24,7 @@ function add(num1, num2) {
     return num2 ? num1 + num2 : num1;
 }
 console.log(add(2));
-var usersarr = [];
+let usersarr = [];
 usersarr.push({
     name: 'ashar',
     age: 2,
@@ -30,26 +33,25 @@ usersarr.push({
         return 'ashar';
     }
 });
-var Users = /** @class */ (function () {
-    function Users(_name) {
+class Users {
+    constructor(_name) {
         this.name = 'ashaq';
         if (_name) {
             this.name = _name;
         }
     }
-    Users.prototype.getName = function () {
+    getName() {
         return 'ashar';
-    };
-    Users.prototype.getNameVoid = function () {
+    }
+    getNameVoid() {
         console.log('chal gaya');
-    };
-    return Users;
-}());
-var a1 = new Users('ashar');
-var a2 = new Users();
+    }
+}
+let a1 = new Users('ashar');
+let a2 = new Users();
 a1.getName();
-var users_1 = require("./users");
-var usersP = new users_1.default();
+const users_1 = __importDefault(require("./users"));
+let usersP = new users_1.default();
 console.log(usersP.getTeacherStudent());
 function usersA(data) {
     return data;
@@ -64,5 +66,5 @@ var Days;
     Days[Days["sat"] = 5] = "sat";
     Days[Days["sun"] = 6] = "sun";
 })(Days || (Days = {}));
-var whichDay;
+let whichDay;
 whichDay = Days.wed;
