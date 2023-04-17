@@ -1,0 +1,2 @@
+int a = 2; --java
+let a:Number = 2; -- ts
